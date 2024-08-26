@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "FonteFuria";
+    src: url("Fontes/Road_Rage.otf") format(opentype);
+}
+
+@font-face {
+    font-family: "Monument";
+    src: url("Fontes/MonumentExtended-Regular.otf") format(opentype);
+
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    display: flex;
+    flex-direction: column;
+    font-family: "Monument";
+    justify-content: start;
+    background-color: #979797;
+    color: white;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 80px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: "FonteFuria"; 
+}
+
+header .imagem-cabecalho {
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+footer{
+    background-color: black;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-family: "Monument";
+    padding: 10px;
+}
+
+footer .imagem-rodape{
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    
+}
+
+footer h1{
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+    font-family: "FonteFuria";
+}
+
+footer h2{
+    margin: 0;
+    flex-grow: 1;
+    text-align: right;
+    font-size: 15px;
+    
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; 
+    border-radius: 6px;
+    border: 3px solid #000; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #222; 
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    background-color: #333; 
+    border-radius: 6px; 
+  }
+  
