@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furia Valorant</title>
+    <link rel="stylesheet" type="text/css" media="(orientation: landscape)" href="./style.css">
+    <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="./mobile.css">
     <link rel="icon" href="Imagens/favicon-32x32.png">
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 
 <body>
     <script src="./script.js"></script>
     <header>
-        <img src="Imagens/Furia_Esports_logo.png" class="imagem-cabecalho ">
+
         <h1>FURIA</h1>
-        <a>Home</a>
-        <a href="https://furia.gg/" target="_blank" >Store</a>
-        <a>About us</a>
+
+        <a href="https://furia.gg/" target="_blank">Home</a>
+
+        <a href="https://furia.gg/furia-store/" target="_blank">Store</a>
+
+        <a href="https://furia.gg/contact-us/" target="_blank">Contact Us</a>
+
+        <a href="https://furia.gg/about/" target="_blank">About</a>
+
     </header>
 
-    <div>
+    <div class="corpo_pagina">
+
         <div class="artigo-landpage">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus facilis odio aspernatur deleniti quibusdam, voluptas excepturi expedita non numquam alias earum eum tempore ex cumque dolor vel corporis minima fugit!
+
+            <h1>ACOMPANHE A FURIA</h1>
+            <p>A FURIA está se preparando para brilhar no Valorant Champions Tour 2025, e a empolgação está a mil!
+                Estamos ansiosos para mostrar nossa paixão e dedicação em cada partida.<br><br>
+                Embora o torneio ainda esteja por vir, a expectativa é alta e a preparação é intensa. Contamos com o
+                apoio de todos para enfrentar os desafios que virão e mostrar o melhor do nosso jogo no stage.<br><br>
+                Não perca nenhuma novidade, calendário de jogos, streams dos seus jogadores favoritos e muito mais.
+                Preencha o formulário para receber todas as atualizações e ficar por dentro de tudo o que está
+                acontecendo com a FURIA Valorant.<br><br>
+                Agradecemos a todos pelo apoio e pela torcida!
+            </p>
         </div>
 
-            
-            <form class="formulario-landpage">
-                <h1>Insira seus dados para receber todas as novidades, calendarios de campeonatos e transmissões dos seus streamers e players de Valorant favoritos!</h1>
-                
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+        <form class="formulario-landpage">
 
-                <label for="idade">Idade:</label>
-                <input type="number" id="idade" name="idade" required>
+            <img src="./Imagens/Furia_Esports_logo.png" alt="logo_furia">
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+            <div class="questao">
+                <i class="fa fa-user"></i>
+                <input placeholder=" Digite seu nome" type="text" id="nome" name="nome" required>
+            </div>
 
-                <label for="jogador">Player Favorito:</label>
+            <div class="questao">
+                <i class="fa fa-birthday-cake"></i>
+                <input placeholder=" Digite sua idade" type="number" min="0" id="idade" name="idade" required>
+            </div>
+
+            <div class="questao">
+                <i class="fa fa-envelope"></i>
+                <input placeholder=" Digite seu email" type="email" id="email" name="email" required>
+            </div>
+
+            <div class="questao">
+                <i class="fa fa-star"></i>
                 <select id="jogador" name="jogador">
-                    <option value="vazio">--</option>
+                    <option value="vazio">Selecione seu jogador favorito</option>
                     <option value="belky">Belky</option>
                     <option value="havoc">Havoc</option>
                     <option value="hehehellen">Hehehellen</option>
@@ -57,10 +82,12 @@
                     <option value="xarola">Xarola</option>
                     <option value="xand">Xand</option>
                 </select>
+            </div>
 
-                <label for="agente">Agente Favorito:</label>
+            <div class="questao">
+                <i class="fa fa-gamepad"></i>
                 <select id="agente" name="agente">
-                    <option value="vazio">--</option>
+                    <option value="vazio">Selecione seu agente</option>
                     <option value="astra">Astra</option>
                     <option value="breach">Breach</option>
                     <option value="brimstone">Brimstone</option>
@@ -85,10 +112,13 @@
                     <option value="vyse">Vyse</option>
                     <option value="yoru">Yoru</option>
                 </select>
-                      
-                <label for="ranking">Ranking:</label>
+            </div>
+
+            <div class="questao">
+
+                <i class="fa fa-trophy"></i>
                 <select id="ranking" name="ranking">
-                    <option value="vazio">--</option>
+                    <option value="vazio">Selecione seu ranking</option>
                     <option value="ferro">Ferro</option>
                     <option value="bronze">Bronze</option>
                     <option value="prata">Prata</option>
@@ -99,18 +129,26 @@
                     <option value="imortal">Imortal</option>
                     <option value="radiante">Radiante</option>
                 </select>
+            </div>
 
-                <button onclick="Submeter()" id="Enviar" type="button">Enviar</button>
+            <a onclick="Submeter()"><span>Enviar</span></a>
 
-                <p id="mensagem"></p>
-            </form>
+            <p id="mensagem"></p>
+        </form>
 
     </div>
 
+    <div id="validationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMensagem"></p>
+        </div>
+    </div>
+
     <footer>
-        <img src="Imagens/Furia_Esports_logo.png" class="imagem-rodape"> 
-        <h1>FURIA</h1>
         <h2>© 2024 Furia. All Rights Reserved.</h2>
     </footer>
+
 </body>
+
 </html>
